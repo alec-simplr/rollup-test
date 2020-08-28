@@ -1444,5 +1444,13 @@ var PopupText = function (_Component) {
   return PopupText;
 }(Component);
 
-export { PopupMenu$1 as PopupMenu, PopupTable, PopupText };
+var Hello = function Hello() {
+  return React.createElement(
+    'h1',
+    null,
+    'HELLO!!!!!!'
+  );
+};
+
+export { PopupMenu$1 as PopupMenu, PopupTable, PopupText, Hello };
 //# sourceMappingURL=rrpm.module.js.map

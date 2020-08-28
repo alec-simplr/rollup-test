@@ -1449,9 +1449,18 @@ var PopupText = function (_Component) {
   return PopupText;
 }(React.Component);
 
+var Hello = function Hello() {
+  return React__default.createElement(
+    'h1',
+    null,
+    'HELLO!!!!!!'
+  );
+};
+
 exports.PopupMenu = PopupMenu$1;
 exports.PopupTable = PopupTable;
 exports.PopupText = PopupText;
+exports.Hello = Hello;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
