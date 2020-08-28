@@ -27,6 +27,7 @@ function __$$styleInject(css, ref) {
 
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import styled from 'styled-components';
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -1242,6 +1243,14 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
+var taggedTemplateLiteral = function (strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+};
+
 var PopupMenu$1 = function (_Component) {
   inherits(PopupMenu$$1, _Component);
   createClass(PopupMenu$$1, [{
@@ -1444,9 +1453,13 @@ var PopupText = function (_Component) {
   return PopupText;
 }(Component);
 
+var _templateObject = taggedTemplateLiteral(['\n  font-size: 100px;\n'], ['\n  font-size: 100px;\n']);
+
+var Hi = styled.h1(_templateObject);
+
 var Hello = function Hello() {
   return React.createElement(
-    'h1',
+    Hi,
     null,
     'HELLO!!!!!!'
   );

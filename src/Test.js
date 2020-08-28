@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Hi = styled.h1`
+  font-size: 100px;
+`;
 
 export const Hello = () => {
-  return <h1>HELLO!!!!!!</h1>
+  return <Hi>HELLO!!!!!!</Hi>
 };

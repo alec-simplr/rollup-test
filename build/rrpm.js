@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-dom')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-dom'], factory) :
-	(factory((global.ReactRectanglePopupMenu = {}),global.React,global.ReactDOM));
-}(this, (function (exports,React,reactDom) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-dom'), require('styled-components')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-dom', 'styled-components'], factory) :
+	(factory((global.ReactRectanglePopupMenu = {}),global.React,global.ReactDOM,global.styled));
+}(this, (function (exports,React,reactDom,styled) { 'use strict';
 
 function __$$styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -32,6 +32,7 @@ function __$$styleInject(css, ref) {
 }
 
 var React__default = 'default' in React ? React['default'] : React;
+styled = styled && styled.hasOwnProperty('default') ? styled['default'] : styled;
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -1247,6 +1248,14 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
+var taggedTemplateLiteral = function (strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+};
+
 var PopupMenu$1 = function (_Component) {
   inherits(PopupMenu$$1, _Component);
   createClass(PopupMenu$$1, [{
@@ -1449,9 +1458,13 @@ var PopupText = function (_Component) {
   return PopupText;
 }(React.Component);
 
+var _templateObject = taggedTemplateLiteral(['\n  font-size: 100px;\n'], ['\n  font-size: 100px;\n']);
+
+var Hi = styled.h1(_templateObject);
+
 var Hello = function Hello() {
   return React__default.createElement(
-    'h1',
+    Hi,
     null,
     'HELLO!!!!!!'
   );

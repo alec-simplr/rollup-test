@@ -43,10 +43,10 @@ export default {
     commonjs()
   ],
 
-  external: ['react', 'react-dom'],
-
+  external: ['react', 'react-dom', 'styled-components'],
   globals: {
     react: 'React',
-    'react-dom': 'ReactDOM'
+    'react-dom': 'ReactDOM',
+    'styled-components': 'styled'
   }
 };
